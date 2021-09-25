@@ -3,15 +3,18 @@ package com.canhdinh.mobileshop.base
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.net.NetworkInfo
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.ViewDataBinding
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.canhdinh.mobileshop.R
 import com.canhdinh.mobileshop.ui.fragment.home_fragment.HomeFragment
 
 
-abstract class BaseActivity : AppCompatActivity() {
+abstract class BaseActivity<_ViewDataBinding : ViewDataBinding> : AppCompatActivity() {
+
+    // TODO: 9/25/2021 onCreate
 
     fun isOnline(context: Context): Boolean {
         return try {
@@ -58,7 +61,7 @@ abstract class BaseActivity : AppCompatActivity() {
     fun replaceFragment(
         fragmentManager: FragmentManager,
         containerId: Int,
-        fragment: BaseFragment,
+        fragment: Fragment,
         addBackStack: Boolean = true,
         hasAnim: Boolean = true
     ) {

@@ -3,7 +3,6 @@ package com.canhdinh.mobileshop.ui.activity.splash_activity
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
-import android.net.ConnectivityManager
 import android.net.wifi.WifiManager
 import android.os.Bundle
 import android.os.CountDownTimer
@@ -12,16 +11,17 @@ import android.os.Looper
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
-import androidx.appcompat.app.AppCompatActivity
 import com.canhdinh.mobileshop.R
 import com.canhdinh.mobileshop.base.BaseActivity
+import com.canhdinh.mobileshop.databinding.ActivitySplashBinding
+import com.canhdinh.mobileshop.databinding.ActivitySplashBindingImpl
 import com.canhdinh.mobileshop.ui.activity.main_activity.MainActivity
 import com.canhdinh.mobileshop.util.LoadingScreen
 import com.google.android.material.snackbar.Snackbar
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class SplashActivity : BaseActivity() {
+class SplashActivity : BaseActivity<ActivitySplashBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         requestWindowFeature(Window.FEATURE_NO_TITLE)
