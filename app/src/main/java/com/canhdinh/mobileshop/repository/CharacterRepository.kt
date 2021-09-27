@@ -18,8 +18,8 @@ class CharacterRepository @Inject constructor(private val apiService: ApiService
             val response = apiService.getAllDogs(page,params.loadSize)
             LoadResult.Page(
                 response,
-                prevKey = if(page == DEFAULT_PAGE_INDEX) null else page-1,
-                nextKey = if(response.isEmpty()) null else page+1
+                prevKey = if(page == DEFAULT_PAGE_INDEX) null else page - 1,
+                nextKey = if(response.isEmpty()) null else page + 1
             )
         } catch (exception: IOException){
             LoadResult.Error(exception)

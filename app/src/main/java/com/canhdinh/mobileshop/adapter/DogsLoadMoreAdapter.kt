@@ -7,17 +7,15 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
-import coil.load
 import com.bumptech.glide.Glide
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
 import com.canhdinh.mobileshop.R
 import com.canhdinh.mobileshop.databinding.EachRowBinding
 import com.canhdinh.mobileshop.model.BreedModel
 import javax.inject.Inject
 
-class DogsAdapter @Inject constructor() :
-    PagingDataAdapter<BreedModel, DogsAdapter.DogsViewHolder>(Diff()) {
+class DogsLoadMoreAdapter @Inject constructor() :
+    PagingDataAdapter<BreedModel, DogsLoadMoreAdapter.DogsViewHolder>(Diff()) {
 
 
     override fun onBindViewHolder(holder: DogsViewHolder, position: Int) {

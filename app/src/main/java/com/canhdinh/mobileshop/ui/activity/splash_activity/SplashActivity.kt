@@ -30,8 +30,12 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         )
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+    }
 
+    override val layoutResourceId: Int?
+        get() = R.layout.activity_splash
+
+    override fun initBaseActivity() {
         checkConnection()
     }
 

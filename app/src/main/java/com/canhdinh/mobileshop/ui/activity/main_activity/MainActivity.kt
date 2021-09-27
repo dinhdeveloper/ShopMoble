@@ -10,9 +10,11 @@ import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+
+    override val layoutResourceId: Int?
+        get() = R.layout.activity_main
+
+    override fun initBaseActivity() {
         initFragment()
     }
 
@@ -24,4 +26,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             addBackStack = false
         )
     }
+
+
 }
