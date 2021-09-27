@@ -5,6 +5,7 @@ import com.canhdinh.mobileshop.R
 import com.canhdinh.mobileshop.base.BaseActivity
 import com.canhdinh.mobileshop.databinding.ActivityMainBinding
 import com.canhdinh.mobileshop.ui.fragment.home_fragment.HomeFragment
+import com.canhdinh.mobileshop.ui.fragment.loadmore_fragment.LoadMoreFragment
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -19,7 +20,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         replaceFragment(
             fragmentManager = supportFragmentManager,
             containerId = R.id.container,
-            fragment = HomeFragment.newInstance(),
+            fragment = LoadMoreFragment.newInstance(),
             addBackStack = false
         )
     }

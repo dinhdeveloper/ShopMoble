@@ -51,4 +51,9 @@ class MobileShopModule {
         okHttpClient.addInterceptor(logging)
         return okHttpClient.build()
     }
+
+    /*
+     context in @Module :
+        (@ApplicationContext context: Context)
+     */
 }
